@@ -1,0 +1,28 @@
+{
+  "name": "kad-ict-hub",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "aos": "^2.3.4",
+    "bootstrap": "^5.3.3",
+    "bootstrap-icons": "^1.13.1",
+    "glightbox": "^3.3.1",
+    "next": "^15",
+    "react": "^18",
+    "react-bootstrap": "^2.10.6",
+    "react-dom": "^18",
+    "swiper": "^12.0.2"
+  },
+  "devDependencies": {
+    "@types/node": "^20",
+    "@types/react": "^18",
+    "@types/react-dom": "^18",
+    "typescript": "^5"
+  }
+}

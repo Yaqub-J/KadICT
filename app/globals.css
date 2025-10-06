@@ -1,0 +1,9 @@
+/* Import Bootstrap */
+@import 'bootstrap/dist/css/bootstrap.min.css';
+@import 'bootstrap-icons/font/bootstrap-icons.css';
+
+/* Import custom CSS from public assets */
+body {
+  margin: 0;
+  padding: 0;
+}
