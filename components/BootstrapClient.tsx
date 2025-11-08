@@ -12,6 +12,7 @@ export default function BootstrapClient() {
       if (typeof window !== 'undefined') {
         // Load AOS
         const AOS = (await import('aos')).default;
+        // @ts-ignore - CSS import
         await import('aos/dist/aos.css');
         AOS.init({
           duration: 1000,
@@ -22,6 +23,7 @@ export default function BootstrapClient() {
 
         // Load GLightbox
         const GLightbox = (await import('glightbox')).default;
+        // @ts-ignore - CSS import
         await import('glightbox/dist/css/glightbox.min.css');
         GLightbox({
           selector: '.glightbox'
@@ -30,75 +32,91 @@ export default function BootstrapClient() {
         // Load Swiper
         const Swiper = (await import('swiper')).default;
         const { Navigation, Pagination, Autoplay } = await import('swiper/modules');
+        // @ts-ignore - CSS import
         await import('swiper/css');
+        // @ts-ignore - CSS import
         await import('swiper/css/navigation');
+        // @ts-ignore - CSS import
         await import('swiper/css/pagination');
 
-        // Initialize Swiper instances
-        new Swiper('.slides-1', {
-          modules: [Navigation, Pagination, Autoplay],
-          speed: 600,
-          loop: true,
-          autoplay: {
-            delay: 5000,
-            disableOnInteraction: false
-          },
-          pagination: {
-            el: '.swiper-pagination',
-            type: 'bullets',
-            clickable: true
-          },
-          navigation: {
-            nextEl: '.swiper-button-next',
-            prevEl: '.swiper-button-prev',
+        // Initialize Swiper instances with a delay to ensure DOM is ready
+        const initializeSwipers = () => {
+          // Initialize .slides-1 swipers
+          const slides1Elements = document.querySelectorAll('.slides-1');
+          if (slides1Elements.length > 0) {
+            slides1Elements.forEach((swiperEl) => {
+              if (!swiperEl.classList.contains('swiper-initialized')) {
+                new Swiper(swiperEl as HTMLElement, {
+                  modules: [Navigation, Pagination, Autoplay],
+                  speed: 600,
+                  loop: true,
+                  autoplay: {
+                    delay: 5000,
+                    disableOnInteraction: false
+                  },
+                  slidesPerView: 1,
+                  pagination: {
+                    el: '.swiper-pagination',
+                    type: 'bullets',
+                    clickable: true
+                  },
+                  navigation: {
+                    nextEl: '.swiper-button-next',
+                    prevEl: '.swiper-button-prev',
+                  }
+                });
+              }
+            });
           }
-        });
 
-        new Swiper('.slides-3', {
-          modules: [Navigation, Pagination, Autoplay],
-          speed: 600,
-          loop: true,
-          autoplay: {
-            delay: 5000,
-            disableOnInteraction: false
-          },
-          slidesPerView: 'auto',
-          pagination: {
-            el: '.swiper-pagination',
-            type: 'bullets',
-            clickable: true
-          },
-          breakpoints: {
-            320: {
-              slidesPerView: 1,
-              spaceBetween: 40
-            },
-            1200: {
-              slidesPerView: 3,
-              spaceBetween: 1
-            }
+          // Initialize .slides-3 swipers
+          const slides3Elements = document.querySelectorAll('.slides-3');
+          if (slides3Elements.length > 0) {
+            slides3Elements.forEach((swiperEl) => {
+              if (!swiperEl.classList.contains('swiper-initialized')) {
+                new Swiper(swiperEl as HTMLElement, {
+                  modules: [Navigation, Pagination, Autoplay],
+                  speed: 600,
+                  loop: true,
+                  autoplay: {
+                    delay: 5000,
+                    disableOnInteraction: false,
+                    pauseOnMouseEnter: true
+                  },
+                  slidesPerView: 1,
+                  spaceBetween: 40,
+                  centeredSlides: true,
+                  pagination: {
+                    el: swiperEl.querySelector('.swiper-pagination') as HTMLElement,
+                    type: 'bullets',
+                    clickable: true
+                  },
+                  breakpoints: {
+                    768: {
+                      slidesPerView: 2,
+                      spaceBetween: 20,
+                      centeredSlides: false
+                    },
+                    1200: {
+                      slidesPerView: 3,
+                      spaceBetween: 20,
+                      centeredSlides: false
+                    }
+                  }
+                });
+              }
+            });
           }
-        });
+        };
 
-        // Mobile navigation toggle
-        const mobileNavShow = document.querySelectorAll('.mobile-nav-show');
-        const mobileNavHide = document.querySelectorAll('.mobile-nav-hide');
+        // Initialize immediately
+        initializeSwipers();
 
-        mobileNavShow.forEach(el => {
-          el.addEventListener('click', function() {
-            document.querySelector('.navbar')?.classList.add('navbar-mobile');
-            this.classList.add('d-none');
-            document.querySelector('.mobile-nav-hide')?.classList.remove('d-none');
-          });
-        });
-
-        mobileNavHide.forEach(el => {
-          el.addEventListener('click', function() {
-            document.querySelector('.navbar')?.classList.remove('navbar-mobile');
-            this.classList.add('d-none');
-            document.querySelector('.mobile-nav-show')?.classList.remove('d-none');
-          });
-        });
+        // Also initialize on DOM content loaded and window load as fallback
+        if (document.readyState === 'loading') {
+          document.addEventListener('DOMContentLoaded', initializeSwipers);
+        }
+        window.addEventListener('load', initializeSwipers);
 
         // Scroll top button
         const scrollTop = document.querySelector('.scroll-top');

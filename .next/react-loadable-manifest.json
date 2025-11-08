@@ -1,61 +1,61 @@
 {
   "components/BootstrapClient.tsx -> aos": {
-    "id": "components/BootstrapClient.tsx -> aos",
+    "id": 9396,
     "files": [
-      "static/chunks/_app-pages-browser_node_modules_aos_dist_aos_js.js"
+      "static/chunks/396.f3ffaba76a4dce25.js"
     ]
   },
   "components/BootstrapClient.tsx -> aos/dist/aos.css": {
-    "id": "components/BootstrapClient.tsx -> aos/dist/aos.css",
+    "id": 1031,
     "files": [
-      "static/css/_app-pages-browser_node_modules_aos_dist_aos_css.css",
-      "static/chunks/_app-pages-browser_node_modules_aos_dist_aos_css.js"
+      "static/css/69f81e06845cd7ae.css",
+      "static/chunks/31.fcd63ad87369905b.js"
     ]
   },
   "components/BootstrapClient.tsx -> glightbox": {
-    "id": "components/BootstrapClient.tsx -> glightbox",
+    "id": 916,
     "files": [
-      "static/chunks/_app-pages-browser_node_modules_glightbox_dist_js_glightbox_min_js.js"
+      "static/chunks/916.0c12213b3d530383.js"
     ]
   },
   "components/BootstrapClient.tsx -> glightbox/dist/css/glightbox.min.css": {
-    "id": "components/BootstrapClient.tsx -> glightbox/dist/css/glightbox.min.css",
+    "id": 6131,
     "files": [
-      "static/css/_app-pages-browser_node_modules_glightbox_dist_css_glightbox_min_css.css",
-      "static/chunks/_app-pages-browser_node_modules_glightbox_dist_css_glightbox_min_css.js"
+      "static/css/b801092f584e20dd.css",
+      "static/chunks/131.056f848bddfb2a01.js"
     ]
   },
   "components/BootstrapClient.tsx -> swiper": {
-    "id": "components/BootstrapClient.tsx -> swiper",
+    "id": 7372,
     "files": [
-      "static/chunks/_app-pages-browser_node_modules_swiper_swiper_mjs.js"
+      "static/chunks/372.c016a62a2b22ec92.js"
     ]
   },
   "components/BootstrapClient.tsx -> swiper/css": {
-    "id": "components/BootstrapClient.tsx -> swiper/css",
+    "id": 4062,
     "files": [
-      "static/css/_app-pages-browser_node_modules_swiper_swiper_css.css",
-      "static/chunks/_app-pages-browser_node_modules_swiper_swiper_css.js"
+      "static/css/1bff5a024019dd7b.css",
+      "static/chunks/62.db0781453820120d.js"
     ]
   },
   "components/BootstrapClient.tsx -> swiper/css/navigation": {
-    "id": "components/BootstrapClient.tsx -> swiper/css/navigation",
+    "id": 1878,
     "files": [
-      "static/css/_app-pages-browser_node_modules_swiper_modules_navigation_css.css",
-      "static/chunks/_app-pages-browser_node_modules_swiper_modules_navigation_css.js"
+      "static/css/a86c08583c63d2b3.css",
+      "static/chunks/878.26a70be37d17f7bd.js"
     ]
   },
   "components/BootstrapClient.tsx -> swiper/css/pagination": {
-    "id": "components/BootstrapClient.tsx -> swiper/css/pagination",
+    "id": 8068,
     "files": [
-      "static/css/_app-pages-browser_node_modules_swiper_modules_pagination_css.css",
-      "static/chunks/_app-pages-browser_node_modules_swiper_modules_pagination_css.js"
+      "static/css/50cae09f11d7c87b.css",
+      "static/chunks/687.86e7fde3e20ec8c9.js"
     ]
   },
   "components/BootstrapClient.tsx -> swiper/modules": {
-    "id": "components/BootstrapClient.tsx -> swiper/modules",
+    "id": 5380,
     "files": [
-      "static/chunks/_app-pages-browser_node_modules_swiper_modules_index_mjs.js"
+      "static/chunks/380.b80fca308ff49ff2.js"
     ]
   }
 }

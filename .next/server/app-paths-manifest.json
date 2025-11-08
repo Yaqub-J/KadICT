@@ -1,8 +1,19 @@
 {
   "/_not-found/page": "app/_not-found/page.js",
-  "/page": "app/page.js",
   "/about/page": "app/about/page.js",
+  "/blog/page": "app/blog/page.js",
+  "/blog-details/page": "app/blog-details/page.js",
+  "/contact/page": "app/contact/page.js",
+  "/challenge/page": "app/challenge/page.js",
+  "/kad55hack/page": "app/kad55hack/page.js",
+  "/events/page": "app/events/page.js",
+  "/portfolio-details/page": "app/portfolio-details/page.js",
+  "/page": "app/page.js",
+  "/programs/[slug]/page": "app/programs/[slug]/page.js",
+  "/programs/page": "app/programs/page.js",
+  "/register/page": "app/register/page.js",
+  "/services/[slug]/page": "app/services/[slug]/page.js",
   "/services/page": "app/services/page.js",
   "/startups/page": "app/startups/page.js",
-  "/programs/page": "app/programs/page.js"
+  "/stemfest/page": "app/stemfest/page.js"
 }

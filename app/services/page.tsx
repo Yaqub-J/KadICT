@@ -17,54 +17,66 @@ export default function ServicesPage() {
             <h2>We offer a wide range of remote and on-site services</h2>
           </div>
 
-          <div className="row gy-5">
+          <div className="row gy-4">
 
-            <div className="col-lg-4 col-md-6 service-item d-flex" data-aos="fade-up" data-aos-delay="100">
-              <div className="icon flex-shrink-0"><i className="bi bi-briefcase" style={{color: '#f57813'}}></i></div>
-              <div>
-                <h4 className="title"><a href="#" className="stretched-link">ERP Systems</a></h4>
-                <p className="description">Our team of experts specializes in the development, design, and deployment of Enterprise Resource Planning (ERP) systems.</p>
-              </div>
+            <div className="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+              <Link href="/services/erp-systems" className="service-card-link">
+                <div className="service-card">
+                  <i className="bi bi-briefcase service-card-icon" style={{color: '#f57813'}}></i>
+                  <h4>ERP Systems</h4>
+                  <p>Our team of experts specializes in the development, design, and deployment of Enterprise Resource Planning (ERP) systems.</p>
+                </div>
+              </Link>
             </div>
 
-            <div className="col-lg-4 col-md-6 service-item d-flex" data-aos="fade-up" data-aos-delay="200">
-              <div className="icon flex-shrink-0"><i className="bi bi-mortarboard" style={{color: '#15a04a'}}></i></div>
-              <div>
-                <h4 className="title"><a href="#" className="stretched-link">Training</a></h4>
-                <p className="description">Our team of certified instructors is dedicated to providing top-notch training on the latest and most in-demand technologies.</p>
-              </div>
+            <div className="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+              <Link href="/services/training" className="service-card-link">
+                <div className="service-card">
+                  <i className="bi bi-mortarboard service-card-icon" style={{color: '#15a04a'}}></i>
+                  <h4>Training</h4>
+                  <p>Our team of certified instructors is dedicated to providing top-notch training on the latest and most in-demand technologies.</p>
+                </div>
+              </Link>
             </div>
 
-            <div className="col-lg-4 col-md-6 service-item d-flex" data-aos="fade-up" data-aos-delay="300">
-              <div className="icon flex-shrink-0"><i className="bi bi-pc-display-horizontal" style={{color: '#d90769'}}></i></div>
-              <div>
-                <h4 className="title"><a href="#" className="stretched-link">Software Testing</a></h4>
-                <p className="description">Our software testing services are second to none. We offer comprehensive and reliable testing solutions that ensure the quality and performance of your digital products.</p>
-              </div>
+            <div className="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+              <Link href="/services/software-testing" className="service-card-link">
+                <div className="service-card">
+                  <i className="bi bi-pc-display-horizontal service-card-icon" style={{color: '#d90769'}}></i>
+                  <h4>Software Testing</h4>
+                  <p>Our software testing services are second to none. We offer comprehensive and reliable testing solutions that ensure the quality and performance of your digital products.</p>
+                </div>
+              </Link>
             </div>
 
-            <div className="col-lg-4 col-md-6 service-item d-flex" data-aos="fade-up" data-aos-delay="400">
-              <div className="icon flex-shrink-0"><i className="bi bi-currency-bitcoin" style={{color: '#15bfbc'}}></i></div>
-              <div>
-                <h4 className="title"><a href="#" className="stretched-link">Blockchain Lab</a></h4>
-                <p className="description">The Africa Blockchain Lab, a groundbreaking initiative in partnership with Satoshi Capital Advisors, is the continent&apos;s premier destination for blockchain research, development, and innovation.</p>
-              </div>
+            <div className="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="400">
+              <Link href="/services/blockchain-lab" className="service-card-link">
+                <div className="service-card">
+                  <i className="bi bi-currency-bitcoin service-card-icon" style={{color: '#15bfbc'}}></i>
+                  <h4>Blockchain Lab</h4>
+                  <p>The Africa Blockchain Lab, a groundbreaking initiative in partnership with Satoshi Capital Advisors, is the continent&apos;s premier destination for blockchain research, development, and innovation.</p>
+                </div>
+              </Link>
             </div>
 
-            <div className="col-lg-4 col-md-6 service-item d-flex" data-aos="fade-up" data-aos-delay="500">
-              <div className="icon flex-shrink-0"><i className="bi bi-reception-4" style={{color: '#f5cf13'}}></i></div>
-              <div>
-                <h4 className="title"><a href="#" className="stretched-link">Incubation & Accelleration</a></h4>
-                <p className="description">Our incubation and acceleration programs offer a comprehensive range of services, including mentorship, funding opportunities, workspace, and access to industry experts.</p>
-              </div>
+            <div className="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="500">
+              <Link href="/services/incubation-acceleration" className="service-card-link">
+                <div className="service-card">
+                  <i className="bi bi-reception-4 service-card-icon" style={{color: '#f5cf13'}}></i>
+                  <h4>Incubation & Acceleration</h4>
+                  <p>Our incubation and acceleration programs offer a comprehensive range of services, including mentorship, funding opportunities, workspace, and access to industry experts.</p>
+                </div>
+              </Link>
             </div>
 
-            <div className="col-lg-4 col-md-6 service-item d-flex" data-aos="fade-up" data-aos-delay="600">
-              <div className="icon flex-shrink-0"><i className="bi bi-file-lock2" style={{color: '#1335f5'}}></i></div>
-              <div>
-                <h4 className="title"><a href="#" className="stretched-link">Big Data & Cyber-security</a></h4>
-                <p className="description">Our unique approach to combining big data and cybersecurity sets us apart from the competition.</p>
-              </div>
+            <div className="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="600">
+              <Link href="/services/big-data-cybersecurity" className="service-card-link">
+                <div className="service-card">
+                  <i className="bi bi-file-lock2 service-card-icon" style={{color: '#1335f5'}}></i>
+                  <h4>Big Data & Cyber-security</h4>
+                  <p>Our unique approach to combining big data and cybersecurity sets us apart from the competition.</p>
+                </div>
+              </Link>
             </div>
 
           </div>

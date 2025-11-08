@@ -1,8 +1,6 @@
 import type { Metadata } from 'next';
 import { Open_Sans, Montserrat, Raleway } from 'next/font/google';
-import Header from '@/components/Header';
-import Footer from '@/components/Footer';
-import BootstrapClient from '@/components/BootstrapClient';
+import ClientLayout from '@/components/ClientLayout';
 import './globals.css';
 
 const openSans = Open_Sans({
@@ -56,10 +54,9 @@ export default function RootLayout({
         <link href="/assets/css/main.css" rel="stylesheet" />
       </head>
       <body className="page-index">
-        <Header />
-        {children}
-        <Footer />
-        <BootstrapClient />
+        <ClientLayout>
+          {children}
+        </ClientLayout>
       </body>
     </html>
   );
