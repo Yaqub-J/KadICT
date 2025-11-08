@@ -13,7 +13,21 @@ export default function Home() {
         <div className="container">
           <div className="row">
             <div className="col-xl-4">
-              <h2 data-aos="fade-up">The KAD ICT Hub</h2>
+              <div className="logo" data-aos="fade-up">
+                <Link href="/" aria-label="KAD ICT Hub">
+                  <Image
+                  src="/assets/img/kadict/logo.png"
+                  alt="KAD ICT Hub Logo"
+                  width={250}
+                  height={60}
+                  className="img-fluid glow-effect"
+                  priority
+                  style={{
+                    filter: 'drop-shadow(100px 100px 100px rgba(255, 255, 255, 1))'
+                  }}
+                  />
+                </Link>
+              </div>
               <blockquote data-aos="fade-up" data-aos-delay="100">
                 <p>A world class innovation hub that from inception has trained more than 20,000 residents of Kaduna State. It is an outsourcing powerhouse from which the public and private sector can outsource their tech needs as well as an incubation/acceleration destination for startups.</p>
               </blockquote>
