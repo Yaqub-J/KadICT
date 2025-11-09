@@ -166,17 +166,18 @@ export default function BootstrapClient() {
         // Scroll top button
         const scrollTop = document.querySelector('.scroll-top');
         if (scrollTop) {
+          const scrollTopElement = scrollTop as HTMLElement;
           const toggleScrollTop = () => {
             if (window.scrollY > 100) {
-              scrollTop.classList.add('active');
+              scrollTopElement.classList.add('active');
             } else {
-              scrollTop.classList.remove('active');
+              scrollTopElement.classList.remove('active');
             }
           };
           window.addEventListener('load', toggleScrollTop);
           window.addEventListener('scroll', toggleScrollTop);
 
-          scrollTop.addEventListener('click', (e) => {
+          scrollTopElement.addEventListener('click', (e) => {
             e.preventDefault();
             window.scrollTo({
               top: 0,
@@ -188,8 +189,9 @@ export default function BootstrapClient() {
         // Preloader - remove immediately
         const preloader = document.querySelector('#preloader');
         if (preloader) {
+          const preloaderElement = preloader as HTMLElement;
           setTimeout(() => {
-            preloader.remove();
+            preloaderElement.remove();
           }, 100);
         }
       }
