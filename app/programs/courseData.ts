@@ -286,6 +286,112 @@ export const courses: Course[] = [
     reviews: []
   },
   {
+    slug: 'ui-ux-design',
+    title: 'UI/UX DESIGN',
+    icon: 'bi-phone-landscape',
+    iconColor: '#17a2b8',
+    category: 'Design',
+    level: 'intermediate',
+    description: 'Design intuitive and engaging user experiences that delight users and drive business success.',
+    overview: 'Master the art and science of UI/UX design. Learn user research, wireframing, prototyping, and usability testing. Create beautiful, user-centered designs for web and mobile applications using industry-standard tools like Figma, Adobe XD, and Sketch.',
+    duration: '12 weeks',
+    price: 165000,
+    flyer: '/assets/img/portfolio/UI-UX.jpeg',
+    instructor: {
+      name: 'Mr. Daniel Okafor',
+      title: 'Senior UX Designer',
+      bio: 'Daniel has over 10 years of experience designing user experiences for leading tech companies and has mentored hundreds of aspiring UX designers.'
+    },
+    studentsEnrolled: 2340,
+    rating: 4.8,
+    reviewCount: 312,
+    learningOutcomes: [
+      'Understand UX research and user psychology',
+      'Create wireframes and prototypes',
+      'Master Figma and Adobe XD',
+      'Conduct usability testing and user interviews',
+      'Design responsive interfaces for web and mobile',
+      'Build a professional UX portfolio'
+    ],
+    prerequisites: [
+      'Basic computer skills',
+      'Understanding of design principles helpful but not required',
+      'Creative mindset and attention to detail'
+    ],
+    curriculum: [
+      {
+        id: 'module-1',
+        title: 'UX Fundamentals',
+        lessons: [
+          { id: 'lesson-1-1', title: 'Introduction to UI/UX Design', duration: '25 min', type: 'video', isPreview: true },
+          { id: 'lesson-1-2', title: 'User-Centered Design Process', duration: '30 min', type: 'video' },
+          { id: 'lesson-1-3', title: 'Design Thinking Methodology', duration: '28 min', type: 'video' },
+          { id: 'lesson-1-4', title: 'Understanding User Psychology', duration: '22 min', type: 'video' }
+        ]
+      },
+      {
+        id: 'module-2',
+        title: 'User Research & Analysis',
+        lessons: [
+          { id: 'lesson-2-1', title: 'User Research Methods', duration: '35 min', type: 'video' },
+          { id: 'lesson-2-2', title: 'Creating User Personas', duration: '30 min', type: 'video' },
+          { id: 'lesson-2-3', title: 'User Journey Mapping', duration: '40 min', type: 'video' },
+          { id: 'lesson-2-4', title: 'Competitive Analysis', duration: '25 min', type: 'video' }
+        ]
+      },
+      {
+        id: 'module-3',
+        title: 'Wireframing & Prototyping',
+        lessons: [
+          { id: 'lesson-3-1', title: 'Introduction to Wireframing', duration: '30 min', type: 'video' },
+          { id: 'lesson-3-2', title: 'Low-Fidelity Prototypes', duration: '35 min', type: 'video' },
+          { id: 'lesson-3-3', title: 'High-Fidelity Prototypes', duration: '40 min', type: 'video' },
+          { id: 'lesson-3-4', title: 'Wireframing Project', duration: '90 min', type: 'assignment' }
+        ]
+      },
+      {
+        id: 'module-4',
+        title: 'Mastering Figma',
+        lessons: [
+          { id: 'lesson-4-1', title: 'Figma Interface & Tools', duration: '30 min', type: 'video' },
+          { id: 'lesson-4-2', title: 'Components & Design Systems', duration: '45 min', type: 'video' },
+          { id: 'lesson-4-3', title: 'Interactive Prototyping in Figma', duration: '50 min', type: 'video' },
+          { id: 'lesson-4-4', title: 'Collaboration & Handoff', duration: '35 min', type: 'video' }
+        ]
+      },
+      {
+        id: 'module-5',
+        title: 'Visual Design & UI',
+        lessons: [
+          { id: 'lesson-5-1', title: 'UI Design Principles', duration: '30 min', type: 'video' },
+          { id: 'lesson-5-2', title: 'Color Theory for UI', duration: '25 min', type: 'video' },
+          { id: 'lesson-5-3', title: 'Typography in UI Design', duration: '28 min', type: 'video' },
+          { id: 'lesson-5-4', title: 'Creating Design Systems', duration: '40 min', type: 'video' }
+        ]
+      },
+      {
+        id: 'module-6',
+        title: 'Usability Testing & Iteration',
+        lessons: [
+          { id: 'lesson-6-1', title: 'Usability Testing Methods', duration: '35 min', type: 'video' },
+          { id: 'lesson-6-2', title: 'Conducting User Interviews', duration: '30 min', type: 'video' },
+          { id: 'lesson-6-3', title: 'Analyzing Test Results', duration: '25 min', type: 'video' },
+          { id: 'lesson-6-4', title: 'Design Iteration & Refinement', duration: '30 min', type: 'video' }
+        ]
+      }
+    ],
+    includes: [
+      '60+ hours of video content',
+      'Real-world UX projects',
+      'Figma & Adobe XD templates',
+      'Design system resources',
+      'Portfolio building guidance',
+      'Certificate of completion',
+      'Lifetime access'
+    ],
+    reviews: []
+  },
+  {
     slug: 'cyber-security',
     title: 'CYBER-SECURITY',
     icon: 'bi-shield-lock',
