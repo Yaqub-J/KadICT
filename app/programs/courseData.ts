@@ -44,6 +44,7 @@ export interface Course {
     avatar?: string;
   };
   thumbnail?: string;
+  flyer?: string; // Path to course flyer image
   studentsEnrolled: number;
   rating: number;
   reviewCount: number;
@@ -66,6 +67,7 @@ export const courses: Course[] = [
     overview: 'Master the art and science of data analysis. Learn to collect, process, and analyze complex datasets using industry-standard tools. This comprehensive course covers statistical analysis, data visualization, and predictive modeling techniques that are in high demand across industries.',
     duration: '12 weeks',
     price: 175000,
+    flyer: '/assets/img/portfolio/Data Analytics.jpg',
     instructor: {
       name: 'Dr. Amina Mohammed',
       title: 'Senior Data Scientist',
@@ -162,6 +164,7 @@ export const courses: Course[] = [
     overview: 'Build a strong foundation in digital skills essential for the modern workplace. From basic computer operations to internet safety and digital communication, this course covers everything you need to confidently navigate the digital world.',
     duration: '6 weeks',
     price: 120000,
+    flyer: '/assets/img/portfolio/digital literacy.jpg',
     instructor: {
       name: 'Mr. Chukwudi Eze',
       title: 'Digital Skills Trainer',
@@ -293,6 +296,7 @@ export const courses: Course[] = [
     overview: 'Become a cybersecurity professional. Learn to protect systems, networks, and data from cyber attacks. Cover ethical hacking, network security, cryptography, and incident response.',
     duration: '14 weeks',
     price: 190000,
+    flyer: '/assets/img/portfolio/cyber security.jpg',
     instructor: {
       name: 'Engr. Usman Abdullahi',
       title: 'Certified Ethical Hacker',
@@ -353,74 +357,6 @@ export const courses: Course[] = [
     reviews: []
   },
   {
-    slug: 'it-siwes',
-    title: 'IT & SIWES',
-    icon: 'bi-briefcase',
-    iconColor: '#6f42c1',
-    category: 'Business',
-    level: 'intermediate',
-    description: 'Bridge the gap between theory and practice in Nigeria\'s tech industry through hands-on experience with our IT & SIWES program.',
-    overview: 'Gain practical industry experience through our IT and SIWES program. Work on real projects, learn industry best practices, and prepare for your professional career in technology.',
-    duration: '24 weeks',
-    price: 160000,
-    instructor: {
-      name: 'Mr. Tunde Bakare',
-      title: 'IT Project Manager',
-      bio: 'Tunde has managed IT projects for over 15 years and has supervised hundreds of SIWES students, helping them transition into professional roles.'
-    },
-    studentsEnrolled: 1567,
-    rating: 4.6,
-    reviewCount: 189,
-    learningOutcomes: [
-      'Gain real-world IT experience',
-      'Work on industry projects',
-      'Learn professional workflows',
-      'Build professional network',
-      'Prepare for IT careers'
-    ],
-    prerequisites: [
-      'Basic IT knowledge',
-      'Currently enrolled in tertiary institution (for SIWES)'
-    ],
-    curriculum: [
-      {
-        id: 'module-1',
-        title: 'Industry Orientation',
-        lessons: [
-          { id: 'lesson-1-1', title: 'Introduction to IT Industry', duration: '20 min', type: 'video', isPreview: true },
-          { id: 'lesson-1-2', title: 'Professional Ethics', duration: '25 min', type: 'video' },
-          { id: 'lesson-1-3', title: 'Workplace Communication', duration: '20 min', type: 'video' }
-        ]
-      },
-      {
-        id: 'module-2',
-        title: 'Technical Skills Development',
-        lessons: [
-          { id: 'lesson-2-1', title: 'Project Management Basics', duration: '30 min', type: 'video' },
-          { id: 'lesson-2-2', title: 'Agile Methodologies', duration: '35 min', type: 'video' },
-          { id: 'lesson-2-3', title: 'Documentation Standards', duration: '25 min', type: 'video' }
-        ]
-      },
-      {
-        id: 'module-3',
-        title: 'Practical Projects',
-        lessons: [
-          { id: 'lesson-3-1', title: 'Project Planning', duration: '40 min', type: 'video' },
-          { id: 'lesson-3-2', title: 'Project Execution', duration: '120 min', type: 'assignment' },
-          { id: 'lesson-3-3', title: 'Project Presentation', duration: '60 min', type: 'assignment' }
-        ]
-      }
-    ],
-    includes: [
-      'Practical industry experience',
-      'Project supervision',
-      'SIWES certification',
-      'Industry mentorship',
-      'Job placement assistance'
-    ],
-    reviews: []
-  },
-  {
     slug: 'networking',
     title: 'NETWORKING',
     icon: 'bi-diagram-3',
@@ -431,6 +367,7 @@ export const courses: Course[] = [
     overview: 'Master computer networking from fundamentals to advanced concepts. Learn to design, implement, and troubleshoot networks. Prepare for industry certifications like CCNA.',
     duration: '12 weeks',
     price: 155000,
+    flyer: '/assets/img/portfolio/networking.jpg',
     instructor: {
       name: 'Engr. Ibrahim Musa',
       title: 'Network Engineer',
@@ -478,15 +415,16 @@ export const courses: Course[] = [
   },
   {
     slug: 'programming',
-    title: 'PROGRAMMING',
+    title: 'SOFTWARE ENGINEERING',
     icon: 'bi-code-slash',
     iconColor: '#fd7e14',
     category: 'Development',
     level: 'intermediate',
-    description: 'Unlock the language of technology and create innovative solutions by mastering coding with our Programming course.',
+    description: 'Unlock the language of technology and create innovative solutions by mastering coding with our Software Engineering course.',
     overview: 'Learn to code from scratch. Master programming fundamentals with Python, then expand to JavaScript and other languages. Build real-world applications and prepare for a software development career.',
     duration: '16 weeks',
     price: 165000,
+    flyer: '/assets/img/portfolio/SOFTWARE ENGINEERING.jpg',
     instructor: {
       name: 'Mr. Emeka Okonkwo',
       title: 'Senior Software Developer',
@@ -553,6 +491,7 @@ export const courses: Course[] = [
     overview: 'Create stunning mobile applications for Android and iOS. Learn React Native for cross-platform development. Build and publish your own mobile apps.',
     duration: '14 weeks',
     price: 180000,
+    flyer: '/assets/img/portfolio/MOBILE APP.jpg',
     instructor: {
       name: 'Mrs. Fatima Yusuf',
       title: 'Mobile App Developer',
@@ -601,65 +540,72 @@ export const courses: Course[] = [
   },
   {
     slug: 'mobile-phone-repairs',
-    title: 'MOBILE PHONE REPAIRS',
-    icon: 'bi-tools',
-    iconColor: '#ffc107',
-    category: 'Hardware',
-    level: 'beginner',
-    description: 'Learn the skills to diagnose and fix mobile phone issues, turning your expertise into a profitable venture with our Mobile Phone Repairs course.',
-    overview: 'Master the art of mobile phone repair. Learn to diagnose and fix common hardware and software issues. Start your own repair business or work as a technician.',
-    duration: '8 weeks',
-    price: 110000,
+    title: 'ARTIFICIAL INTELLIGENCE',
+    icon: 'bi-cpu',
+    iconColor: '#6f42c1',
+    category: 'Data',
+    level: 'advanced',
+    description: 'Dive into the world of Artificial Intelligence and learn to build intelligent systems that can learn, reason, and make decisions.',
+    overview: 'Master the fundamentals of Artificial Intelligence and Machine Learning. Learn to build intelligent systems using Python, TensorFlow, and cutting-edge AI technologies. Explore neural networks, deep learning, natural language processing, and computer vision.',
+    duration: '16 weeks',
+    price: 200000,
+    flyer: '/assets/img/portfolio/AI.jpg',
     instructor: {
-      name: 'Mr. Peter Obi',
-      title: 'Mobile Repair Specialist',
-      bio: 'Peter has repaired thousands of devices over 10 years and runs a successful repair business while training new technicians.'
+      name: 'Dr. Yusuf Ibrahim',
+      title: 'AI Research Scientist',
+      bio: 'Dr. Yusuf has over 12 years of experience in AI research and development, with multiple published papers and successful AI implementations across various industries.'
     },
-    studentsEnrolled: 2789,
-    rating: 4.6,
-    reviewCount: 345,
+    studentsEnrolled: 1850,
+    rating: 4.9,
+    reviewCount: 267,
     learningOutcomes: [
-      'Diagnose mobile phone problems',
-      'Repair common hardware issues',
-      'Troubleshoot software problems',
-      'Use repair tools and equipment',
-      'Start a repair business'
+      'Understand AI and Machine Learning fundamentals',
+      'Build neural networks and deep learning models',
+      'Implement natural language processing solutions',
+      'Develop computer vision applications',
+      'Deploy AI models in production environments'
     ],
-    prerequisites: ['Basic electronics knowledge helpful but not required'],
+    prerequisites: [
+      'Programming experience (Python preferred)',
+      'Basic understanding of mathematics and statistics',
+      'Familiarity with linear algebra and calculus helpful'
+    ],
     curriculum: [
       {
         id: 'module-1',
-        title: 'Mobile Phone Basics',
+        title: 'Introduction to AI and Machine Learning',
         lessons: [
-          { id: 'lesson-1-1', title: 'Mobile Phone Components', duration: '20 min', type: 'video', isPreview: true },
-          { id: 'lesson-1-2', title: 'Tools and Equipment', duration: '25 min', type: 'video' },
-          { id: 'lesson-1-3', title: 'Safety Precautions', duration: '15 min', type: 'video' }
+          { id: 'lesson-1-1', title: 'What is Artificial Intelligence?', duration: '25 min', type: 'video', isPreview: true },
+          { id: 'lesson-1-2', title: 'Machine Learning Fundamentals', duration: '30 min', type: 'video' },
+          { id: 'lesson-1-3', title: 'Setting Up Your AI Development Environment', duration: '20 min', type: 'video' }
         ]
       },
       {
         id: 'module-2',
-        title: 'Hardware Repairs',
+        title: 'Neural Networks and Deep Learning',
         lessons: [
-          { id: 'lesson-2-1', title: 'Screen Replacement', duration: '30 min', type: 'video' },
-          { id: 'lesson-2-2', title: 'Battery Replacement', duration: '25 min', type: 'video' },
-          { id: 'lesson-2-3', title: 'Charging Port Repair', duration: '30 min', type: 'video' },
-          { id: 'lesson-2-4', title: 'Component Replacement', duration: '35 min', type: 'video' }
+          { id: 'lesson-2-1', title: 'Introduction to Neural Networks', duration: '35 min', type: 'video' },
+          { id: 'lesson-2-2', title: 'Backpropagation and Training', duration: '40 min', type: 'video' },
+          { id: 'lesson-2-3', title: 'Convolutional Neural Networks', duration: '45 min', type: 'video' },
+          { id: 'lesson-2-4', title: 'Recurrent Neural Networks', duration: '40 min', type: 'video' }
         ]
       },
       {
         id: 'module-3',
-        title: 'Software Troubleshooting',
+        title: 'Natural Language Processing',
         lessons: [
-          { id: 'lesson-3-1', title: 'Software Issues Diagnosis', duration: '25 min', type: 'video' },
-          { id: 'lesson-3-2', title: 'Flashing and Updates', duration: '30 min', type: 'video' },
-          { id: 'lesson-3-3', title: 'Unlocking Devices', duration: '25 min', type: 'video' }
+          { id: 'lesson-3-1', title: 'Text Processing and Tokenization', duration: '30 min', type: 'video' },
+          { id: 'lesson-3-2', title: 'Word Embeddings and Language Models', duration: '35 min', type: 'video' },
+          { id: 'lesson-3-3', title: 'Building Chatbots and NLP Applications', duration: '40 min', type: 'video' }
         ]
       }
     ],
     includes: [
-      '30+ hours of video content',
-      'Repair demonstrations',
-      'Business setup guide',
+      '80+ hours of video content',
+      'Hands-on AI projects',
+      'Access to GPU computing resources',
+      'Real-world datasets',
+      'AI model deployment guides',
       'Certificate of completion',
       'Lifetime access'
     ],
@@ -676,6 +622,7 @@ export const courses: Course[] = [
     overview: 'Become a professional web developer. Learn HTML, CSS, JavaScript, and modern frameworks. Build responsive websites and web applications from scratch.',
     duration: '16 weeks',
     price: 150000,
+    flyer: '/assets/img/portfolio/WEB DEV.jpg',
     instructor: {
       name: 'Mr. Ahmed Bello',
       title: 'Full Stack Developer',

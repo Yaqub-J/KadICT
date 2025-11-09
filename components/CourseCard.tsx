@@ -101,16 +101,6 @@ export default function CourseCard({ course }: CourseCardProps) {
         </div>
 
         <div className="course-card-footer">
-          <div className="course-price">
-            {course.price === 0 ? (
-              <span className="price-free">Free</span>
-            ) : (
-              <>
-                <span className="price-currency">₦</span>
-                <span className="price-amount">{course.price.toLocaleString()}</span>
-              </>
-            )}
-          </div>
           <div className="course-instructor">
             <i className="bi bi-person-circle"></i>
             <span>{course.instructor.name}</span>

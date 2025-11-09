@@ -4,7 +4,7 @@ import { notFound } from 'next/navigation';
 import Link from 'next/link';
 import Breadcrumbs from '@/components/Breadcrumbs';
 import { getCourseBySlug } from '../courseData';
-import { useState, use } from 'react';
+import { useState, use, useEffect } from 'react';
 
 interface CourseDetailPageProps {
   params: Promise<{
@@ -15,6 +15,7 @@ interface CourseDetailPageProps {
 export default function CourseDetailPage({ params }: CourseDetailPageProps) {
   const [activeTab, setActiveTab] = useState<'overview' | 'curriculum' | 'instructor' | 'reviews'>('overview');
   const [expandedModules, setExpandedModules] = useState<number[]>([]);
+  const [showFlyerPopup, setShowFlyerPopup] = useState(false);
 
   const { slug } = use(params);
   const course = getCourseBySlug(slug);
@@ -22,6 +23,16 @@ export default function CourseDetailPage({ params }: CourseDetailPageProps) {
   if (!course) {
     notFound();
   }
+
+  // Show popup when course page loads
+  useEffect(() => {
+    if (course.flyer) {
+      const timer = setTimeout(() => {
+        setShowFlyerPopup(true);
+      }, 1000);
+      return () => clearTimeout(timer);
+    }
+  }, [course.flyer]);
 
   // Toggle module expansion
   const toggleModule = (index: number) => {
@@ -297,17 +308,6 @@ export default function CourseDetailPage({ params }: CourseDetailPageProps) {
               <div className="course-sidebar">
                 {/* Enrollment Card */}
                 <div className="enrollment-card">
-                  <div className="price-section">
-                    {course.price === 0 ? (
-                      <div className="price-free">Free</div>
-                    ) : (
-                      <div className="price-paid">
-                        <span className="currency">₦</span>
-                        <span className="amount">{course.price.toLocaleString()}</span>
-                      </div>
-                    )}
-                  </div>
-
                   <button className="btn-enroll">
                     <i className="bi bi-bookmark-check"></i>
                     Enroll Now
@@ -330,6 +330,13 @@ export default function CourseDetailPage({ params }: CourseDetailPageProps) {
                     </ul>
                   </div>
                 </div>
+
+                {/* Course Flyer */}
+                {course.flyer && (
+                  <div className="course-flyer-card">
+                    <img src={course.flyer} alt={`${course.title} Flyer`} className="img-fluid" />
+                  </div>
+                )}
 
                 {/* Course Info Card */}
                 <div className="course-info-card">
@@ -368,6 +375,18 @@ export default function CourseDetailPage({ params }: CourseDetailPageProps) {
           </div>
         </div>
       </section>
+
+      {/* Course Flyer Popup */}
+      {showFlyerPopup && course.flyer && (
+        <div className="course-flyer-popup-overlay" onClick={() => setShowFlyerPopup(false)}>
+          <div className="course-flyer-popup" onClick={(e) => e.stopPropagation()}>
+            <button className="close-popup" onClick={() => setShowFlyerPopup(false)}>
+              <i className="bi bi-x-lg"></i>
+            </button>
+            <img src={course.flyer} alt={`${course.title} Flyer`} className="img-fluid" />
+          </div>
+        </div>
+      )}
     </main>
   );
 }
